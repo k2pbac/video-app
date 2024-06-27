@@ -1,9 +1,33 @@
 .sidebar {
-  height: 960px;
+  height: 90%;
   width: 96px;
   background-color: #161d2f;
   border-radius: 20px;
   padding: 28px 32px;
-  margin-top: 32px;
   margin-left: 32px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar .icon-group {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sidebar img {
+  height: 20px;
+  width: 20px;
+}
+
+.sidebar img.logo {
+  width: 32px;
+  height: 25px;
+}
+.sidebar img.avatar {
+  width: 40px;
+  height: 40px;
 }
