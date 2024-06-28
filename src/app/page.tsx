@@ -13,7 +13,7 @@ export default function Home() {
       <div className="content">
         <SearchBar />
         <div className="trending-card-list-container">
-          <p>Trending</p>
+          <p className="trending-title">Trending</p>
           <TrendingCardList />
         </div>
       </div>

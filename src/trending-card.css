@@ -3,7 +3,7 @@
   color: white;
 }
 
-.trending-card-list-container p:first-child {
+.trending-card-list-container .trending-title {
   font-size: 32px;
   letter-spacing: -0.05em;
   font-weight: 300;
@@ -24,4 +24,78 @@
   height: 230px;
   border-radius: 8px;
   background-size: cover !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trending-card .info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100px;
+  padding-left: 24px;
+  padding-top: 24px;
+  background: linear-gradient(
+    -180deg,
+    rgba(0, 0, 0, 0%) 0%,
+    rgba(0, 0, 0, 75%) 100%
+  );
+}
+
+.trending-card .year {
+  font-size: 16px;
+  font-weight: 300;
+  position: relative;
+  width: fit-content;
+}
+
+.dot,
+.dot-2 {
+  height: 4px;
+  width: 4px;
+  background-color: #979797;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  right: -14px;
+  top: 48%;
+}
+
+.dot-2 {
+  left: -14px;
+}
+
+.trending-card .category {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trending-card .top-row {
+  display: flex;
+  gap: 24px;
+}
+
+.trending-card .title {
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+}
+
+.trending-card .bookmark {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 24px;
+  padding-right: 24px;
+}
+
+.trending-card .bookmark div {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(16, 20, 30, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
