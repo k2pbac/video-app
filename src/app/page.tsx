@@ -1,10 +1,10 @@
 import SideBar from "@/components/sidebar";
 import SearchBar from "@/components/searchbar";
-import TrendingCard from "@/components/trending-card";
 import "../sidebar.css";
 import "./page.css";
 import "../searchbar.css";
 import "../trending-card.css";
+import TrendingCardList from "@/components/trending-card-list";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         <SearchBar />
         <div className="trending-card-list">
           <p>Trending</p>
-          <TrendingCard image={""} year={""} type={""} rating={""} title={""} />
+          <TrendingCardList />
         </div>
       </div>
     </main>
