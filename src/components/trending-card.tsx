@@ -2,7 +2,6 @@ import { CardDetails } from "@/interfaces";
 
 export default function TrendingCard(props: CardDetails) {
   const category = props.category === "TV Series" ? "tv" : "movie";
-
   return (
     <div
       className="trending-card"
@@ -10,7 +9,12 @@ export default function TrendingCard(props: CardDetails) {
     >
       <div className="bookmark">
         <div>
-          <img src="/icon-bookmark-empty.svg" alt="bookmark-icon" />
+          <img
+            src={`/icon-bookmark-${
+              !!props.isBookmarked ? "full" : "empty"
+            }.svg`}
+            alt="bookmark-icon"
+          />
         </div>
       </div>
       <div className="info">
