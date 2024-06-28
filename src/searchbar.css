@@ -1,10 +1,25 @@
 .content .searchbar {
   display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 22px;
 }
 
 .content .searchbar input {
   background: inherit;
-  field-sizing: content;
+  width: 346px;
+  max-width: 100%;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 200;
+  color: white;
+  padding-left: 6px;
+}
+
+.content .searchbar input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.content .searchbar img {
+  width: 32px;
+  height: 32px;
 }

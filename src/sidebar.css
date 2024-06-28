@@ -1,15 +1,15 @@
 .sidebar {
-  height: 90%;
-  width: 96px;
   background-color: #161d2f;
   border-radius: 20px;
   padding: 28px 32px;
   margin-left: 32px;
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: sticky;
+  margin-bottom: 72px;
   justify-content: space-between;
   align-items: center;
+  height: 90vh;
 }
 
 .sidebar .icon-group {

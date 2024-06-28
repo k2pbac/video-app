@@ -1,8 +1,9 @@
-import SideBar from "@/sidebar";
+import SideBar from "@/components/sidebar";
+import SearchBar from "@/components/searchbar";
 import "../sidebar.css";
 import "./page.css";
 import "../searchbar.css";
-import SearchBar from "@/searchbar";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen items-center">
