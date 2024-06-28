@@ -3,6 +3,7 @@
   flex-direction: column;
   margin-left: 36px;
   height: 100vh;
+  width: calc(100% - 100px);
 }
 
 main {

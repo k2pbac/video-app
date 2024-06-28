@@ -12,7 +12,7 @@ export default function Home() {
       <SideBar />
       <div className="content">
         <SearchBar />
-        <div className="trending-card-list">
+        <div className="trending-card-list-container">
           <p>Trending</p>
           <TrendingCardList />
         </div>

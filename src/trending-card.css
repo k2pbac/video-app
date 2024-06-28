@@ -1,18 +1,27 @@
-.trending-card-list {
+.trending-card-list-container {
   margin-top: 36px;
   color: white;
 }
 
-.trending-card-list p:first-child {
+.trending-card-list-container p:first-child {
   font-size: 32px;
   letter-spacing: -0.05em;
   font-weight: 300;
   margin-bottom: 1rem;
 }
 
+.trending-card-list {
+  width: calc(100% - 64px);
+  display: flex;
+  overflow: scroll;
+  gap: 40px;
+}
+
 .trending-card {
-  width: 470px;
+  flex-basis: 470px;
+  flex-grow: 0;
+  flex-shrink: 0;
   height: 230px;
   border-radius: 8px;
-  background-color: white;
+  background-size: cover !important;
 }

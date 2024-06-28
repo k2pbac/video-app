@@ -1,29 +1,31 @@
-import TrendingCard from "./trending-card";
-import { CardDetails } from "@/interfaces";
-import data from "../../data.json";
+"use client";
 
-function getCards(data: Array<CardDetails>): Array<typeof TrendingCard> {
-  console.log(data[0]);
-  for (let i = 0; i < data.length; i++) {
-    console.log(data[i]["title"]);
-  }
-  return [];
-}
+import TrendingCard from "./trending-card";
+import data from "../../data.json";
+import { useEffect, useState } from "react";
+import { CardDetails } from "@/interfaces";
 
 export default function TrendingCardList() {
-  const cards = getCards(data);
+  function getTrendingCards(data: CardDetails[]): Array<React.ReactElement> {
+    const cards: Array<React.ReactElement> = [];
 
-  return (
-    <div>
-      <TrendingCard
-        thumbnail={{}}
-        year={""}
-        category={""}
-        rating={""}
-        title={""}
-        isBookmarked={false}
-        isTrending={false}
-      />
-    </div>
-  );
+    for (let i = 0; i < data.length; i++) {
+      if (!!data[i].isTrending) {
+        cards.push(
+          <TrendingCard
+            year={data[i].year}
+            category={data[i].category}
+            rating={data[i].rating}
+            title={data[i].title}
+            thumbnail={data[i].thumbnail}
+            isBookmarked={false}
+            isTrending={false}
+          />
+        );
+      }
+    }
+    return cards;
+  }
+
+  return <div className="trending-card-list">{getTrendingCards(data)}</div>;
 }
