@@ -1,0 +1,99 @@
+.media-card-list-container {
+  margin-top: 36px;
+  color: white;
+}
+
+.media-card-list-container .media-title {
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.media-card-list {
+  width: calc(100% - 32px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 2rem;
+}
+
+.media-card {
+  width: 280px;
+  max-width: 280px;
+  height: 226px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.media-card .info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 52px;
+  padding-top: 10px;
+}
+
+.media-card .year {
+  font-size: 14px;
+  font-weight: 300;
+  position: relative;
+  width: fit-content;
+  opacity: 0.7;
+}
+
+.dot,
+.dot-2 {
+  height: 4px;
+  width: 4px;
+  background-color: #979797;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  right: -14px;
+  top: 48%;
+}
+
+.dot-2 {
+  left: -14px;
+}
+
+.media-card .category {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.media-card .top-row {
+  display: flex;
+  gap: 24px;
+}
+
+.media-card .title {
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+
+.media-card .bookmark {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 18px;
+  padding-right: 18px;
+  height: 174px;
+  border-radius: 8px;
+  background-size: cover !important;
+}
+
+.media-card .bookmark div {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(16, 20, 30, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

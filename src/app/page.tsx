@@ -4,7 +4,10 @@ import "../sidebar.css";
 import "./page.css";
 import "../searchbar.css";
 import "../trending-card.css";
+import "../media-card.css";
+
 import TrendingCardList from "@/components/trending-card-list";
+import MediaCardList from "@/components/media-card-list";
 
 export default function Home() {
   return (
@@ -15,6 +18,10 @@ export default function Home() {
         <div className="trending-card-list-container">
           <p className="trending-title">Trending</p>
           <TrendingCardList />
+        </div>
+        <div className="media-card-list-container">
+          <p className="media-title">Recommended for you</p>
+          <MediaCardList />
         </div>
       </div>
     </main>
