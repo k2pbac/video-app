@@ -20,16 +20,27 @@
   gap: 40px;
 }
 
+.sidebar .icon-group img:hover {
+  filter: invert(46%) sepia(47%) saturate(5950%) hue-rotate(335deg)
+    brightness(100%) contrast(97%);
+  cursor: pointer;
+}
+.sidebar .icon-group img.page-accessed:hover,
+.page-accessed {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(48%) saturate(171%)
+    hue-rotate(225deg) brightness(118%) contrast(100%);
+}
+
 .sidebar img {
   height: 20px;
   width: 20px;
 }
 
 .sidebar img.logo {
-  width: 32px;
-  height: 25px;
+  width: 26px;
+  height: 20px;
 }
 .sidebar img.avatar {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
 }

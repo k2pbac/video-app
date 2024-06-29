@@ -1,10 +1,5 @@
 import SideBar from "@/components/sidebar";
 import SearchBar from "@/components/searchbar";
-import "../sidebar.css";
-import "./page.css";
-import "../searchbar.css";
-import "../trending-card.css";
-import "../media-card.css";
 
 import TrendingCardList from "@/components/trending-card-list";
 import MediaCardList from "@/components/media-card-list";
