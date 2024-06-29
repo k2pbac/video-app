@@ -10,6 +10,8 @@
   justify-content: space-between;
   align-items: center;
   height: 90vh;
+  top: 36px;
+  min-width: fit-content;
 }
 
 .sidebar .icon-group {
