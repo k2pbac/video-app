@@ -26,7 +26,7 @@ export default function SideBar() {
         </Link>
         <Link href="/tv-series">
           <img
-            className={`${pathname === "/tv" ? "page-accessed" : ""}`}
+            className={`${pathname === "/tv-series" ? "page-accessed" : ""}`}
             src="./icon-nav-tv-series.svg"
             alt="tv icon"
           />
