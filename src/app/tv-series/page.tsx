@@ -7,10 +7,14 @@ export default function TVSeries() {
     <main className="flex min-h-screen items-center">
       <SideBar />
       <div className="content">
-        <SearchBar placeholder="Search for TV series" />
+        <SearchBar
+          placeholder="Search for TV series"
+          setFilter={() => console.log("hello")}
+          filter=""
+        />
         <div className="media-card-list-container">
           <p className="media-title">TV Series</p>
-          <MediaCardList type="tv" />
+          <MediaCardList type="tv" filter="" />
         </div>
       </div>
     </main>
