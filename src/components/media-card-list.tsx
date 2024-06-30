@@ -6,23 +6,26 @@ import MediaCard from "./media-card";
 
 interface Props {
   type: string;
+  filter: string;
 }
 
 export default function MediaCardList(props: Props) {
   function getMediaCards(data: CardDetails[]): Array<React.ReactElement> {
     const cards: Array<React.ReactElement> = [];
-
     for (let i = 0; i < data.length; i++) {
+      const element = data[i];
+      console.log(element.title.includes(props.filter));
       if (
-        (!data[i].isTrending && props.type === "all") ||
-        (props.type === "movies" && data[i].category !== "TV Series") ||
-        (props.type === "tv" && data[i].category !== "Movie") ||
+        (props.filter && element.title.includes(props.filter)) ||
+        (!element.isTrending && props.type === "all") ||
+        (props.type === "movies" && element.category !== "TV Series") ||
+        (props.type === "tv" && element.category !== "Movie") ||
         (props.type === "bookmarked-movies" &&
-          !!data[i].isBookmarked &&
-          data[i].category === "Movie") ||
+          !!element.isBookmarked &&
+          element.category === "Movie") ||
         (props.type === "bookmarked-tv" &&
-          !!data[i].isBookmarked &&
-          data[i].category === "TV Series")
+          !!element.isBookmarked &&
+          element.category === "TV Series")
       ) {
         cards.push(
           <MediaCard
