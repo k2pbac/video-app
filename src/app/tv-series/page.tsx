@@ -1,3 +1,4 @@
+import MediaCardList from "@/components/media-card-list";
 import SearchBar from "@/components/searchbar";
 import SideBar from "@/components/sidebar";
 
@@ -6,7 +7,11 @@ export default function TVSeries() {
     <main className="flex min-h-screen items-center">
       <SideBar />
       <div className="content">
-        <SearchBar />
+        <SearchBar placeholder="Search for TV series" />
+        <div className="media-card-list-container">
+          <p className="media-title">TV Series</p>
+          <MediaCardList type="tv" />
+        </div>
       </div>
     </main>
   );

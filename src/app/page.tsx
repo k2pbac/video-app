@@ -9,14 +9,14 @@ export default function Home() {
     <main className="flex min-h-screen items-center">
       <SideBar />
       <div className="content">
-        <SearchBar />
+        <SearchBar placeholder="Search for movies or TV series" />
         <div className="trending-card-list-container">
           <p className="trending-title">Trending</p>
           <TrendingCardList />
         </div>
         <div className="media-card-list-container">
           <p className="media-title">Recommended for you</p>
-          <MediaCardList />
+          <MediaCardList type="all" />
         </div>
       </div>
     </main>
