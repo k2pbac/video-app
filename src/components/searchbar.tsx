@@ -3,8 +3,6 @@
 import { ChangeEvent, useState } from "react";
 interface Props {
   placeholder: string;
-  setFilter: (content: string) => void;
-  filter: string;
 }
 
 export default function SearchBar(props: Props) {
@@ -19,7 +17,7 @@ export default function SearchBar(props: Props) {
       <input
         onChange={(e) => handleChange(e)}
         onKeyDown={(e) => {
-          if (e.key === "Enter") props.setFilter(filter);
+          // if (e.key === "Enter") props.setFilter(filter);
         }}
         type="text"
         name="search-bar"
