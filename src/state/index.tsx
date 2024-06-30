@@ -9,22 +9,28 @@ interface Filter {
 
 interface MediaState {
   data: CardDetails[];
-  bookmarkedTvData?: CardDetails[];
+  bookmarkedData: { movies: CardDetails[]; tv: CardDetails[] };
   filter: Filter;
-  filterData: (data: CardDetails[], filter: Filter) => CardDetails[];
-  filterBookmarkData: (
-    data: CardDetails[],
-    filter: Filter
-  ) => { movies: CardDetails[]; tv: CardDetails[] };
+  filterData: (filter: Filter) => CardDetails[];
+  filterBookmarkData: (filter: Filter) => {
+    movies: CardDetails[];
+    tv: CardDetails[];
+  };
   setFilter: (search: string, page: string) => void;
+  setFilteredData: (filteredData: CardDetails[]) => void;
+  setBookmarkFilteredData: (bookmarkedData: {
+    movies: CardDetails[];
+    tv: CardDetails[];
+  }) => void;
 }
 
-const filterData = (data: CardDetails[], filter: Filter): CardDetails[] => {
+const filterData = (filter: Filter): CardDetails[] => {
   const pageFilter = filter.page;
   return data.filter((element) => {
-    if (pageFilter === "all")
-      return element.title.includes(filter.search) && !element.isTrending;
-    else if (pageFilter === "movies")
+    if (pageFilter === "all") {
+      if (!!filter.search) return element.title.includes(filter.search);
+      else return element.title.includes(filter.search) && !element.isTrending;
+    } else if (pageFilter === "movies")
       return (
         element.title.includes(filter.search) &&
         element.category !== "TV Series"
@@ -37,7 +43,6 @@ const filterData = (data: CardDetails[], filter: Filter): CardDetails[] => {
 };
 
 const filterBookmarkData = (
-  data: CardDetails[],
   filter: Filter
 ): { movies: CardDetails[]; tv: CardDetails[] } => {
   const movies: Array<CardDetails> = [];
@@ -62,12 +67,26 @@ const filterBookmarkData = (
 
 const useMediaStore = create<MediaState>()((set) => ({
   data: data,
-  bookmarkedTvData: [],
+  bookmarkedData: { movies: [], tv: [] },
   filter: { search: "", page: "all" },
   filterData: filterData,
   filterBookmarkData: filterBookmarkData,
   setFilter: (search: string, page: string) =>
-    set((state) => ({ filter: { search: search, page: page } })),
+    set((state) => ({
+      filter: { search: search, page: page === "" ? state.filter.page : page },
+    })),
+  setFilteredData: (filteredData: CardDetails[]) =>
+    set((state) => ({ data: filteredData })),
+  setBookmarkFilteredData: (bookmarkFiltereData: {
+    movies: CardDetails[];
+    tv: CardDetails[];
+  }) =>
+    set((state) => ({
+      bookmarkedData: {
+        movies: bookmarkFiltereData.movies,
+        tv: bookmarkFiltereData.tv,
+      },
+    })),
 }));
 
 export default useMediaStore;
