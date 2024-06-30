@@ -53,6 +53,7 @@
     margin-bottom: 0;
     z-index: 100;
     margin-left: 0;
+    position: fixed;
   }
 
   .sidebar .icon-group {
