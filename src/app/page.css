@@ -22,3 +22,12 @@ main {
     width: calc(100% - 16px);
   }
 }
+
+@media only screen and (max-width: 480px) {
+  main {
+    margin-top: 36px;
+  }
+  .content {
+    width: 100%;
+  }
+}

@@ -48,8 +48,6 @@
 }
 
 .trending-card .year {
-  font-size: 16px;
-  font-weight: 300;
   position: relative;
   width: fit-content;
 }
@@ -80,6 +78,8 @@
   display: flex;
   gap: 24px;
   opacity: 0.75;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .trending-card .title {
@@ -142,5 +142,26 @@
 @media only screen and (max-width: 820px) {
   .trending-card-list {
     width: calc(100% - 16px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .trending-card {
+    flex-basis: 240px;
+    height: 140px;
+  }
+
+  .trending-card-list-container .trending-title {
+    font-size: 20px;
+    letter-spacing: -0.3px;
+  }
+  .trending-card .top-row {
+    font-size: 12px;
+  }
+  .trending-card .title {
+    font-size: 1rem;
+  }
+  .trending-card .info {
+    padding-top: 36px;
   }
 }

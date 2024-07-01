@@ -37,3 +37,15 @@
   bottom: -26px;
   left: 69px;
 }
+
+@media only screen and (max-width: 480px) {
+  .content .searchbar img {
+    width: 24px;
+    height: 24px;
+  }
+  .content .searchbar input,
+  .content .searchbar input::placeholder {
+    font-size: 18px;
+    font-weight: 200;
+  }
+}
