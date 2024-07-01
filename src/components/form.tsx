@@ -33,14 +33,14 @@ function FormFloatingBasicExample(props: { type: string }) {
       <Form.Group controlId="validationPassword">
         <Form.Control type="text" placeholder="Password" required />
         <Form.Control.Feedback type="invalid">
-          Can't be empty
+          {"Can't be empty"}
         </Form.Control.Feedback>
       </Form.Group>
       {!isRegistered ? (
         <Form.Group controlId="validationPasswordRepeat">
           <Form.Control type="text" placeholder="Repeat password" required />
           <Form.Control.Feedback type="invalid">
-            Can't be empty
+            {"Can't be empty"}
           </Form.Control.Feedback>
         </Form.Group>
       ) : null}
