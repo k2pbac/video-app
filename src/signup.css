@@ -21,6 +21,13 @@
   padding-bottom: 48px;
 }
 
+.sign-up-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 336px;
+}
+
 .sign-up-container p {
   font-size: 32px;
   margin-bottom: 0;
@@ -74,4 +81,13 @@
 .sign-up-container button:hover {
   background-color: white;
   color: #161d2f;
+}
+
+.was-validated .form-control:invalid:focus,
+.was-validated .form-control:valid:focus {
+  box-shadow: none !important;
+}
+
+.was-validated .form-control:invalid {
+  background-image: none !important;
 }

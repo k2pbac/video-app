@@ -1,12 +1,12 @@
 import Form from "@/components/form";
 
-export default function SignUp() {
+export default function Login() {
   return (
     <div className="sign-up-page">
       <img src="./logo.svg" alt="logo" />
       <div className="sign-up-container">
-        <p>Sign Up</p>
-        <Form type="register" />
+        <p>Login</p>
+        <Form type="login" />
       </div>
     </div>
   );
