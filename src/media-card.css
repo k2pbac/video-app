@@ -73,6 +73,7 @@
   align-items: center;
   gap: 6px;
   opacity: 0.7;
+  white-space: nowrap;
 }
 
 .media-card .top-row {
@@ -156,12 +157,15 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .media-card-list {
+    width: 100%;
+  }
   .media-card {
-    width: 164px;
+    width: calc(50% - 32px);
     height: 154px;
   }
   .media-card .bookmark {
-    width: 164px;
+    width: 100%;
     height: 110px;
     padding-top: 12px;
     padding-right: 14px;
