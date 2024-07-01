@@ -1,0 +1,77 @@
+.sign-up-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.sign-up-container {
+  width: 400px;
+  height: fit-content;
+  border-radius: 20px;
+  background-color: #161d2f;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 24px;
+  padding-bottom: 48px;
+}
+
+.sign-up-container p {
+  font-size: 32px;
+  margin-bottom: 0;
+  letter-spacing: -0.05em;
+  font-weight: 300;
+}
+
+.sign-up-page input {
+  width: 336px;
+  background: inherit;
+  border: none;
+  border-bottom: 1px solid #5a698f;
+  border-radius: 0;
+  padding-bottom: 16px;
+  color: white;
+  caret-color: #fc4747;
+}
+
+.sign-up-page input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sign-up-page .form-control:focus {
+  background-color: inherit !important;
+  box-shadow: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.sign-up-container button {
+  background-color: #fc4747;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.sign-up-container a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.sign-up-container a span {
+  padding-left: 8px;
+  color: #fc4747;
+}
+
+.sign-up-container button:hover {
+  background-color: white;
+  color: #161d2f;
+}

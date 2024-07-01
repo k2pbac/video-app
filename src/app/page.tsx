@@ -8,7 +8,6 @@ import TrendingCardList from "@/components/trending-card-list";
 
 import useMediaStore from "@/state";
 import MediaCardList from "@/components/media-card-list";
-
 export default function Home() {
   const { setFilter } = useMediaStore((state) => state);
 

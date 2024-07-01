@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../signup.css";
 import "../sidebar.css";
 import "./page.css";
 import "../searchbar.css";

@@ -8,7 +8,9 @@ export default function SideBar() {
 
   return (
     <div className="sidebar">
-      <img src="./logo.svg" alt="nav icon" className="logo" />
+      <Link href="/signup">
+        <img src="./logo.svg" alt="nav icon" className="logo" />
+      </Link>
       <div className="icon-group">
         <Link href="/">
           <img
