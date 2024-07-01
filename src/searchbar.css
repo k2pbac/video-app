@@ -3,6 +3,7 @@
   gap: 30px;
   align-items: center;
   margin-top: 22px;
+  position: relative;
 }
 
 .content .searchbar input {
@@ -13,13 +14,26 @@
   font-weight: 200;
   color: white;
   padding-left: 6px;
+  caret-color: #fc4747;
+  cursor: pointer;
 }
 
 .content .searchbar input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.content .searchbar input:focus-visible {
+  outline: none;
+}
+
 .content .searchbar img {
   width: 32px;
   height: 32px;
+}
+
+.content .searchbar img.line {
+  width: calc(100% - 92px);
+  position: absolute;
+  bottom: -26px;
+  left: 69px;
 }

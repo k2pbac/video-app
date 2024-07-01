@@ -9,6 +9,7 @@ interface Props {
 
 export default function SearchBar(props: Props) {
   const { setFilter, filter } = useMediaStore((state) => state);
+  const [showInput, setShowInput] = useState(false);
   const [inputFilter, setInputfilter] = useState<string>("");
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputfilter(e.target.value);
@@ -28,11 +29,17 @@ export default function SearchBar(props: Props) {
         onKeyDown={(e) => {
           if (e.key === "Enter") handleSearchSubmit();
         }}
+        onFocus={() => setShowInput(true)}
+        onBlur={() => setShowInput(false)}
         type="text"
         name="search-bar"
         placeholder={props.placeholder}
         value={inputFilter}
+        autoComplete="off"
       />
+      {showInput ? (
+        <img src="./line.svg" alt="underline" className="line" />
+      ) : null}
     </div>
   );
 }
