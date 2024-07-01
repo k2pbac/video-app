@@ -7,9 +7,20 @@ export default function TrendingCard(props: CardDetails) {
       className="trending-card"
       style={{ background: `url(${props.thumbnail.trending?.large})` }}
     >
+      <div className="play-button">
+        <img src="./icon-play.svg" alt="play-icon" />
+        <p>Play</p>
+      </div>
+      <div className="background-hover"></div>
+
       <div className="bookmark">
-        <div>
+        <div
+          className={`bookmark-icon-container ${
+            !!props.isBookmarked ? "no-hover" : ""
+          }`}
+        >
           <img
+            className="bookmark-icon"
             src={`/icon-bookmark-${
               !!props.isBookmarked ? "full" : "empty"
             }.svg`}

@@ -9,8 +9,18 @@ export default function MediaCard(props: CardDetails) {
         style={{ background: `url(${props.thumbnail.regular?.large})` }}
         className="bookmark"
       >
-        <div>
+        <div className="play-button">
+          <img src="./icon-play.svg" alt="play-icon" />
+          <p>Play</p>
+        </div>
+        <div className="background-hover"></div>
+        <div
+          className={`bookmark-icon-container ${
+            !!props.isBookmarked ? "no-hover" : ""
+          }`}
+        >
           <img
+            className="bookmark-icon"
             src={`/icon-bookmark-${
               !!props.isBookmarked ? "full" : "empty"
             }.svg`}

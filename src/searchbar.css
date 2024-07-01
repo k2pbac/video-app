@@ -15,6 +15,7 @@
   color: white;
   padding-left: 6px;
   caret-color: #fc4747;
+  cursor: pointer;
 }
 
 .content .searchbar input::placeholder {
